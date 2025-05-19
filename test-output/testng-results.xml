@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-05-19T08:04:50 IST" name="Default suite" finished-at="2025-05-19T08:04:54 IST" duration-ms="4083">
+    <groups>
+    </groups>
+    <test started-at="2025-05-19T08:04:50 IST" name="Default test" finished-at="2025-05-19T08:04:54 IST" duration-ms="4083">
+      <class name="com.apiauto.restassured.GetBookingDetails">
+        <test-method signature="getallbookings()[pri:0, instance:com.apiauto.restassured.GetBookingDetails@2af004b]" started-at="2025-05-19T08:04:50 IST" name="getallbookings" finished-at="2025-05-19T08:04:54 IST" duration-ms="4003" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getallbookings -->
+      </class> <!-- com.apiauto.restassured.GetBookingDetails -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
