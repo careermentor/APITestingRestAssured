@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.apiauto.restassured.GetBookingDetails">
+      <class name="com.apiauto.restassured.DeleteBooking">
         <methods>
           <include name="getallbookings"/>
         </methods>
-      </class> <!-- com.apiauto.restassured.GetBookingDetails -->
+      </class> <!-- com.apiauto.restassured.DeleteBooking -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

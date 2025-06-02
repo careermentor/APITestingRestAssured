@@ -29,6 +29,8 @@ public class GetAllBooking
 		
 		Assert.assertFalse(bookingIDs.isEmpty());
 		
+		
+		
 	}
 	
 }

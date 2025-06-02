@@ -1,14 +1,11 @@
 package com.apiauto.restassured;
 
 import org.testng.Assert;
-import org.testng.annotations.*;
+import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
-
-import static io.restassured.RestAssured.*;
-
-import java.util.List;
 
 public class GetBookingDetails 
 {
@@ -25,23 +22,27 @@ public class GetBookingDetails
 		
 		Assert.assertEquals(resp.getStatusCode(), 200);  //hard assertion
 		
+		SoftAssert sa = new SoftAssert();
+		
 		String actfirstname = resp.jsonPath().getString("firstname");
-		Assert.assertEquals(actfirstname, "Susan");
+		sa.assertEquals(actfirstname, "Susan");
 		
 		String actlastname = resp.jsonPath().getString("lastname");
-		Assert.assertEquals(actlastname, "Wilson");
+		sa.assertEquals(actlastname, "Wilson");
 		
 		int acttotalprice = resp.jsonPath().getInt("totalprice");
-		Assert.assertEquals(acttotalprice, 257);
+		sa.assertEquals(acttotalprice, 257);
 		
 		boolean actdepostapid = resp.jsonPath().getBoolean("depositpaid");
-		Assert.assertEquals(actdepostapid, false);
+		sa.assertEquals(actdepostapid, false);
 		
 		String booking_checkin = resp.jsonPath().getString("bookingdates.checkin");
-		Assert.assertEquals(booking_checkin, "2018-12-06");
+		sa.assertEquals(booking_checkin, "2018-12-06");
 		
 		String booking_checkout = resp.jsonPath().getString("bookingdates.checkout");
-		Assert.assertEquals(booking_checkout, "2021-01-17");
+		sa.assertEquals(booking_checkout, "2021-01-17");
+		
+		sa.assertAll();
 		
 	}
 	
